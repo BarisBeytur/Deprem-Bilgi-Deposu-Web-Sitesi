@@ -35,3 +35,9 @@ http://deprembilgideposu.infinityfreeapp.com/
 ![12](https://github.com/BarisBeytur/Deprem-Bilgi-Deposu-Web-Sitesi/assets/77030797/947a6184-162c-46c2-8eda-db13fce8d0a8)
 ![13](https://github.com/BarisBeytur/Deprem-Bilgi-Deposu-Web-Sitesi/assets/77030797/b1bc9a8c-10d6-4761-9354-7134839803a3)
 ![14](https://github.com/BarisBeytur/Deprem-Bilgi-Deposu-Web-Sitesi/assets/77030797/e6140fb7-0c16-448d-a891-372529b7b4d7)
+
+## Developed By
+***Barış Beytur***
+
+## Social
+[![Linkedin](https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/barisbeytur/)
