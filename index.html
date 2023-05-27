@@ -1,0 +1,859 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Deprem Bilgi Deposu</title>
+    <link rel="icon" type="image/x-icon" href="image/favicon.ico">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Pro">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    
+    
+<!-- renk : #F84434 -->
+
+  <!-- css -->
+  <style>
+
+body{
+  margin-top: 10px;
+}
+
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-map-marker,.fa-home {font-size:200px}
+    
+.card-text{
+text-align:left;
+
+}
+
+
+.navbar-toggler{
+  background-color: rgb(235, 234, 234);
+}
+
+
+.nav-item{
+  padding: 10px;
+      
+}
+
+@media (max-width:767px)
+{
+  .carousel-caption h2,p
+  {
+    text-align : center
+  }
+}
+
+
+.navcolor{
+  color:rgb(255, 255, 255);
+  transition: 0.3s;
+  font-size: 25px;
+}
+
+.navcolor:hover{
+  color: rgb(196, 195, 195);
+  filter: brightness(100%);
+
+}
+
+.carousel-item{
+  height: 450px;
+
+}
+
+
+.darken-background{
+  filter: brightness(50%);
+  height: 650px; 
+  width: auto;
+}
+
+.site-footer
+{
+  background-color:#26272b;
+  padding:45px 0 20px;
+  font-size:15px;
+  line-height:24px;
+  color:#737373;
+}
+.site-footer hr
+{
+  border-top-color:#bbb;
+  opacity:0.5
+}
+.site-footer hr.small
+{
+  margin:20px 0
+}
+.site-footer h6
+{
+  color:#fff;
+  font-size:16px;
+  text-transform:uppercase;
+  margin-top:5px;
+  letter-spacing:2px
+}
+.site-footer a
+{
+  color:#737373;
+}
+.site-footer a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links
+{
+  padding-left:0;
+  list-style:none
+}
+.footer-links li
+{
+  display:block
+}
+.footer-links a
+{
+  color:#737373
+}
+.footer-links a:active,.footer-links a:focus,.footer-links a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links.inline li
+{
+  display:inline-block
+}
+.site-footer .social-icons
+{
+  text-align:right
+}
+.site-footer .social-icons a
+{
+  width:40px;
+  height:40px;
+  line-height:40px;
+  margin-left:6px;
+  margin-right:0;
+  border-radius:100%;
+  background-color:#33353d
+}
+.copyright-text
+{
+  margin:0
+}
+@media (max-width:991px)
+{
+  .site-footer [class^=col-]
+  {
+    margin-bottom:30px;
+  }
+}
+@media (max-width:767px)
+{
+  .site-footer
+  {
+    padding-bottom:0
+  }
+  .site-footer .copyright-text,.site-footer .social-icons
+  {
+    text-align:center
+  }
+}
+.social-icons
+{
+  padding-left:0;
+  margin-bottom:0;
+  list-style:none
+}
+.social-icons li
+{
+  display:inline-block;
+  margin-bottom:4px
+}
+.social-icons li.title
+{
+  margin-right:15px;
+  text-transform:uppercase;
+  color:#96a2b2;
+  font-weight:700;
+  font-size:13px
+}
+.social-icons a{
+  background-color:#eceeef;
+  color:#818a91;
+  font-size:16px;
+  display:inline-block;
+  line-height:44px;
+  width:44px;
+  height:44px;
+  text-align:center;
+  margin-right:8px;
+  border-radius:100%;
+  -webkit-transition:all .2s linear;
+  -o-transition:all .2s linear;
+  transition:all .2s linear
+}
+.social-icons a:active,.social-icons a:focus,.social-icons a:hover
+{
+  color:#fff;
+  background-color:#29aafe
+}
+.social-icons.size-sm a
+{
+  line-height:34px;
+  height:34px;
+  width:34px;
+  font-size:14px
+}
+.social-icons a.facebook:hover
+{
+  background-color:#3b5998
+}
+.social-icons a.twitter:hover
+{
+  background-color:#00aced
+}
+.social-icons a.linkedin:hover
+{
+  background-color:#007bb6
+}
+.social-icons a.dribbble:hover
+{
+  background-color:#ea4c89
+}
+@media (max-width:767px)
+{
+  .social-icons li.title
+  {
+    display:block;
+    margin-right:0;
+    font-weight:600
+  }
+}
+
+.card-style{
+  text-decoration-line: none;
+  color: black;
+}
+
+.navblack:focus{
+  color: rgb(255, 255, 255)
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+
+
+.nav-item a{
+    font-family: 11px poppins, sans-serif;
+    font-size: 19px;
+    font-weight: 500;
+    transition: all 150ms ease-in;
+    line-height: 1;
+    position: relative;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+
+.card:hover{
+  transform: scale(1.020);
+  transition: 0.5s;
+}
+
+.category li:hover{
+  background-color: #4e9bffce;
+  transition: 0.5s;
+}
+
+.categ-header{
+  background-color: #2d88ff;
+  font-weight: bold;
+  color: white;
+}
+
+#categ{
+  padding-left: 35px;
+}
+@media screen and (max-width:1190px){
+
+#categ li{
+  width: 150px;
+  height: 90px;
+  border-radius: 10px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+}
+@media screen and (min-width:1000px){
+
+#categ li{
+  width: 200px;
+  border-radius: 10px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+}
+
+@media screen and (min-width:1300px)
+{
+#categ li{
+width: 300px;
+height: 45px;
+border-radius: 10px;
+font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+margin: 10px;
+text-transform: uppercase;
+font-weight: bold;
+}
+}
+
+
+.card{
+  box-shadow: 10px 10px 10px rgb(156, 156, 156);
+
+}
+
+.nav-item .dot {
+  width: 8px;
+  height: 8px;
+  background: #ffffff;
+  border-radius: 50%;
+  opacity: 0;
+  -webkit-transform: translateX(30px);
+  transform: translateX(30px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-item #nav1:hover ~ .dot {
+  -webkit-transform: translateX(30px);
+  transform: translateX(30px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+  margin-left: 27px;
+}
+
+.nav-item #nav2:hover ~ .dot {
+  -webkit-transform: translateX(30px);
+  transform: translateX(30px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+  margin-left: 63px;
+}
+
+.nav-item #nav3:hover ~ .dot {
+  -webkit-transform: translateX(30px);
+  transform: translateX(30px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+  margin-left: 10px;
+}
+
+.nav-item #nav4:hover ~ .dot {
+  -webkit-transform: translateX(30px);
+  transform: translateX(30px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+  margin-left: 40px;
+}
+
+.nav-item #nav5:hover ~ .dot {
+  -webkit-transform: translateX(30px);
+  transform: translateX(30px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+  margin-left: 17px;
+}
+
+.carousel-caption p{
+  font-size: 18px;
+}
+
+.button {
+  position: relative;
+  background-color: #04AA6D;
+  border: none;
+  font-size: 28px;
+  color: #FFFFFF;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius:20px;
+}
+
+.button:after {
+  content: "";
+  background: #90EE90;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px!important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+.button:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+
+  </style>
+  <!-- css -->
+
+</head>
+
+
+  <body>
+
+
+    <!-- Navbar -->
+  
+    <nav class="navbar navbar-expand-lg w3-red fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html"><img src="image/logo-no-background.png" style="height: 100px; width: auto" alt=""></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a id="nav1" class="nav-link navcolor navblack" aria-current="page" href="index.html#top">
+            Anasayfa</a>
+            <div class="dot"></div>
+        </li>
+        <li class="nav-item dropdown">
+          <a id="nav2" class="nav-link dropdown-toggle navcolor navblack"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Son Depremler
+          </a>
+          <div class="dot"></div>
+          <ul class="dropdown-menu navblack">
+            <li><a class="dropdown-item text-black" target="_blank" href="http://www.koeri.boun.edu.tr/scripts/lst0.asp">Kandilli Rasathanesi</a></li>
+            <li><a class="dropdown-item text-black" target="_blank" href="https://deprem.afad.gov.tr/last-earthquakes.html">AFAD</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a id="nav3" class="nav-link navcolor navblack" href="bagis.html">Bağış</a>
+          <div class="dot"></div>
+        </li>
+        <li class="nav-item">
+          <a id="nav4" class="nav-link navcolor navblack" href="hakkimizda.html">Hakkımızda</a>
+          <div class="dot"></div>
+        </li>
+        <li class="nav-item">
+          <a id="nav5" class="nav-link navcolor navblack" href="iletisim.html">İLETİŞİM</a>
+          <div class="dot"></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>  
+<!-- navbar -->
+
+
+
+
+<!-- Carousel -->
+
+
+<div id="carouselExampleCaptions" class="carousel slide" style="margin-top: 120px;">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="darken-background d-block darken-background w-100">
+        <img src="image/CB-stage-from-the-rubble-1920x450.jpg" alt="...">
+      </div>
+      <div class="carousel-caption d-none d-md-block">
+        <h3>Biliyor muydunuz?</h3>
+        <p>2021 yılına kadar olan verilere göre, dünya çapında her yıl ortalama olarak 150.000'e yakın deprem meydana gelmektedir. Bu depremlerin çoğu hafif şiddetli olsa da, büyük ölçekli depremler de meydana gelmektedir. Büyük bir deprem olarak kabul edilen 7.0 ve üzeri büyüklükteki depremler yılda ortalama 15-20 kez meydana gelmektedir. Deprem aktivitesinin yoğun olduğu bölgeler arasında Büyük Okyanus'ta bulunan Pasifik Ateş Çemberi, Akdeniz ve Orta Doğu'da yer alan Alp-Himalaya Kuşağı, Amerika kıtasının batı sahili ve Japonya gibi alanlar öne çıkmaktadır. Depremlerin yol açtığı can ve mal kaybı ise büyük ölçüde depremin büyüklüğüne, nüfus yoğunluğuna ve alınan önlemlere bağlıdır.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="darken-background d-block darken-background w-100">
+        <img src="https://www.amd.com/system/files/2022-07/1505851-cr-report_earth_resize-1920x450.png" alt="...">
+      </div>
+      <div class="carousel-caption d-none d-md-block">
+        <h3>Biliyor muydunuz?</h3>
+        <p>Deprem, dünyanın birçok bölgesinde yaşanan doğal afetlerden biridir. Depremler, yer kabuğunda meydana gelen enerjinin serbest bırakılması sonucu ortaya çıkar. Yer kabuğunda bulunan levhaların hareket etmesi veya birikmiş gerilimin aniden boşalmasıyla depremler meydana gelir.Depremlerin şiddeti Richter ölçeği ile ölçülür ve genellikle büyüklükleri 1 ila 10 arasında değişir. Depremler, yer yüzünde büyük hasarlara ve can kayıplarına neden olabilir. Ayrıca, tsunami gibi ikincil etkiler de tetikleyebilir. Depremlere karşı önlem almak için binaların sağlam bir şekilde inşa edilmesi, deprem bilinci ve eğitimi gibi tedbirler alınmalıdır.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="darken-background d-block darken-background w-100">
+        <img src="image/2020_earthquake_damage_header_1920x450.jpg" alt="...">
+      </div>
+      <div class="carousel-caption d-none d-md-block">
+        <h3>Biliyor muydunuz?</h3>
+        <p>Depremler, sadece fiziksel etkileriyle sınırlı kalmayıp, psikolojik ve sosyal etkileri de beraberinde getirir. Büyük bir deprem, insanların yaşadığı toplumları derinden etkileyebilir ve travmatik sonuçlara yol açabilir. Deprem anında veya sonrasında yaşanan korku, panik ve belirsizlik duyguları, insanların ruh sağlığını olumsuz etkileyebilir. Ayrıca, depremler evsiz bırakabilir, altyapıyı hasar verebilir ve toplumların normal yaşamlarını sürdürmelerini engelleyebilir. Bu nedenle, deprem sonrası acil yardım ve destek önemlidir. Psikolojik danışmanlık, afet yönetimi ve toplumsal dayanışma gibi destek mekanizmaları, depremzedelere yardımcı olmak ve toplumun iyileşmesine katkıda bulunmak için önemli bir rol oynar.</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div> <!-- Carousel bitiş -->
+
+
+
+
+
+<!-- İçerik başlangıç -->
+<div class="container">
+
+  <div class="row">
+    <div class="col-sm-10 col-md-9 mt-5 order-2 order-lg-1">
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="col">
+    <a href="icerik1.html" class="card-style">
+    <div class="card h-100 ">
+      <img src="https://images.freeimages.com/cme/images/previews/628/first-aid-case-icon-45732.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"> <b>Deprem çantası nasıl hazırlanır?</b> </h5>
+        <p class="card-text">Depreme hazırlıklı olmanın yollarından biri de deprem çantası hazırlamaktır. Deprem çantası hakkında daha detaylı bilgi almak için tıklayın!</p>
+      </div>
+    </div>
+  </a>
+  </div>
+  <div class="col">
+    <a href="icerik2.html" class="card-style">
+    <div class="card h-100">
+      <img src="https://img-s1.onedio.com/id-5f9fc933af5fca5f4f81bd3c/rev-0/w-620/f-jpg/s-a55d4e279e2caf80f3c3a543ab1fdcce7edf45d5.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title align-self-end "> <b>Kolonlarınız depreme ne kadar dayanıklı?</b> </h5>
+        <p class="card-text">Kolonlar depremde bina dayanıklılığı açısından büyük rol oynuyor. Peki ne kadar sağlam olduklarını nasıl öğreneceğiz? Öğrenmek için tıklayın!</p>
+      </div>
+    </div>
+  </a>
+  </div>
+  <div class="col">
+    <a href="icerik3.html" class="card-style">
+    <div class="card h-100">
+      <img src="https://iasbh.tmgrup.com.tr/f270ab/0/0/0/0/0/0?u=https://isbh.tmgrup.com.tr/sb/album/2020/11/03/afad-ve-mta-fay-hatti-sorgulama-ekrani-2020-turkiye-deprem-risk-haritasi-ile-evimin-altindan-yakinindan-fay-hatti-geciyor-mu-1604392342224.jpg&mw=600" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title "> <br> <b>AFAD Deprem Tehlike Haritası</b> </h5>
+        <p class="card-text">AFAD'ın yayınlamış olduğu deprem tehlike haritası konumumuzun deprem riski hakkında oldukça iyi fikirler edinmemizi sağlıyor. Haritayı incelemek için tıklayın!</p>
+      </div>
+    </div>
+  </a>
+  </div>
+  <div class="col">
+    <a href="icerik4.html" class="card-style">
+    <div class="card h-100">
+      <img src="https://i01.sozcucdn.com/wp-content/uploads/2020/01/25/iecrop/deprem-so-dakika_16_9_1579940852.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"><b>Deprem nedir?</b></h5>
+        <p class="card-text">Depremi hepimiz duymuşuzdur ancak deprem tam olarak nedir ve nasıl oluşur tam olarak bilmiyor olabiliriz. Bu içeriğimizden depremin
+          ne olduğunu, nasıl oluştuğunu ve nelere sebep olduğunu öğrenebilirsiniz. Detaylı bilgi için tıklayın!
+        </p>
+      </div>
+    </div>
+  </a>
+  </div>
+  <div class="col">
+    <a href="icerik5.html" class="card-style">
+    <div class="card h-100">
+      <img src="https://cdn.karar.com/news/1523848.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"><b>Deprem Sırasında Yapılması Gerekenler</b></h5>
+        <p class="card-text">Deprem anında hepimiz panikleriz ancak o an saniyelerin önemi çok büyüktür. Bu nedenle herkesin bilmesi gereken 
+          deprem anında yapılması gereken bazı önemli şeyler vardır. Detaylı bilgi için tıklayın!
+        </p>
+      </div>
+    </div>
+  </a>
+  </div>
+  <div class="col">
+    <a href="icerik6.html" class="card-style">
+    <div class="card h-100">
+      <img src="image/MinyBaby-Esya-Tv-Sabitleme---Deprem-Guvenligi-Kayisi-Metal-Baslikli-Beyaz-resim-409.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"><b>Depreme karşı alınabilecek önlemler</b></h5>
+        <p class="card-text">Deprem anında aldığımız önlemlerin yanı sıra bir de depremden önce almamız gereken önlemler vardır. Bu önlemlerin başında dolapları sabitlemek 
+          gelir. Detaylı bilgi için tıklayın!
+        </p>
+      </div>
+    </div>
+  </a>
+  </div>
+</div>
+</div>
+
+
+<!-- kategoriler desktop -->
+
+
+<div id="categ" class="col-3 mt-5 col-md-3 d-none d-md-block order-md-2">
+  <ul class="list-group d-none d-md-block">
+    <li class="categ-header list-group-item d-flex justify-content-center align-items-center">
+      KATEGORİLER
+    </li>
+  <a target="_blank" class="category" href="http://www.koeri.boun.edu.tr/scripts/lst0.asp">
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+      SON DEPREMLER
+      <span class="badge bg-danger rounded-pill">CANLI</span>
+    </li>
+  </a>
+  <li class="categ-header list-group-item d-flex justify-content-center align-items-center">
+    HARİTALAR
+  </li>
+  <a class="category" target="_blank" href="https://tdth.afad.gov.tr/">
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+      Deprem Tehlike Haritası
+      <span class="badge bg-primary rounded-pill">0</span>
+    </li>
+  </a>
+  <a class="category" target="_blank" href="https://mapelse.github.io/istanbulJeoloji/">
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+      İstanbul Jeoloji Haritası
+      <span class="badge bg-primary rounded-pill">0</span>
+    </li>
+  </a>
+  <a target="_blank" class="category" href="https://www.mta.gov.tr/v3.0/hizmetler/yenilenmis-diri-fay-haritalari">
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+      Diri Fay hattı haritası
+      <span class="badge bg-primary rounded-pill">0</span>
+    </li>
+  </a>
+  <li class="categ-header bg bg-secondary list-group-item d-flex justify-content-center align-items-center">
+    DİĞER
+  </li>
+  <a class="category" href="binasaglamliktesti.html">
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+      Bina sağlamlık testi
+      <span class="badge bg-primary rounded-pill">TEST</span>
+    </li>
+  </a>
+  <a class="category" href="bagis.html">
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+     Bağış yap
+      <span class="badge bg-primary rounded-pill">BAĞIŞ</span>
+    </li>    
+  </a>
+  </ul>
+</div> <!-- kategoriler desktop bitiş -->
+
+<!-- kategoriler mobil -->
+
+<div class="col-sm-6 mt-2 dropdown d-block d-md-none">
+  <ul class="list-group">
+    <li class="categ-header list-group-item d-flex justify-content-center align-items-center">
+      KATEGORİLER
+    </li>
+  <a target="_blank" class="category" href="http://www.koeri.boun.edu.tr/scripts/lst0.asp">
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+      SON DEPREMLER
+      <span class="badge bg-danger rounded-pill">CANLI</span>
+    </li>
+  </a>
+  <li class="categ-header list-group-item d-flex justify-content-center align-items-center">
+    HARİTALAR
+  </li>
+  <a class="category" target="_blank" href="https://tdth.afad.gov.tr/">
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+      Deprem Tehlike Haritası
+      <span class="badge bg-primary rounded-pill">0</span>
+    </li>
+  </a>
+  <a class="category" target="_blank" href="https://mapelse.github.io/istanbulJeoloji/">
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+      İstanbul Jeoloji Haritası
+      <span class="badge bg-primary rounded-pill">0</span>
+    </li>
+  </a>
+  <a target="_blank" class="category" href="https://www.mta.gov.tr/v3.0/hizmetler/yenilenmis-diri-fay-haritalari">
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+      Diri Fay hattı haritası
+      <span class="badge bg-primary rounded-pill">0</span>
+    </li>
+  </a>
+  <li class="categ-header bg bg-secondary list-group-item d-flex justify-content-center align-items-center">
+    DİĞER
+  </li>
+  <a class="category" href="binasaglamliktesti.html">
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+      Bina sağlamlık testi
+      <span class="badge bg-primary rounded-pill">TEST</span>
+    </li>
+  </a>
+  <a class="category" href="bagis.html">
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+     Bağış yap
+      <span class="badge bg-primary rounded-pill">BAĞIŞ</span>
+    </li>    
+  </a>
+  </ul>
+</div> <!-- kategoriler mobil bitiş -->
+
+</div> <!-- row bitiş -->
+</div> <!-- İçerik container bitiş -->
+
+
+
+
+
+
+
+
+
+<!-- PROJE HAKKINDA BAŞLANGIÇ -->
+
+<!-- First Grid -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container mt-5">
+  <div class="w3-content">
+    <div class="w3-twothird">
+      <h1>Proje Hakkında</h1>
+      <h5 class="w3-padding-32">Bu proje, Bülent Ecevit Üniversitesi Bilgisayar Mühendisliği Öğrencileri tarafından geliştirilen ve tamamen gönüllülük esasına dayanan, hiçbir resmi 
+        kuruluşla herhangi bir bağlantısı bulunmayan bir sosyal sorumluluk projesidir.
+      </h5>
+
+      <p class="w3-text-grey">Projede herhangi bir veri alımı söz konusu değildir. Site üzerindeki tüm kısımlar ve içerikler geliştirme ekibimiz tarafından
+        geliştirilmiş olup, ilgili bazı kısımlardaki bilgiler, devletin kendi resmi kurum ve kuruluş sitelerine aktarma yapmaktadır. Veriler tamamen resmi 
+        kurum ve kuruluşların gerçek verilerini içermektedir.
+      </p>
+    </div>
+
+    <div class="w3-third w3-center">
+      <i class="fa fa-home w3-padding-64 w3-text-red"></i>
+    </div>
+  </div>
+</div>
+
+<!-- Second Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-third w3-center">
+      <i class="fa fa-map-marker w3-padding-64 w3-text-red w3-margin-right"></i>
+    </div>
+
+    <div class="w3-twothird">
+      <h1>Proje Amacı</h1>
+      <h5 class="w3-padding-32">Depremle ilgili merak edilen ve ulaşılmak istenilen tüm bilgileri tek bir web sitede toplayıp kullanıcılara kolaylık sağlamak ve deprem bilinci oluşturmak ana amacımızdır.
+      </h5>
+
+      <p class="w3-text-grey">Projede herhangi bir veri alımı söz konusu değildir. Site üzerindeki tüm kısımlar ve içerikler geliştirme ekibimiz tarafından
+        geliştirilmiş olup, ilgili bazı kısımlardaki bilgiler, devletin kendi resmi kurum ve kuruluş sitelerine aktarma yapmaktadır. Veriler tamamen resmi 
+        kurum ve kuruluşların gerçek verilerini içermektedir.</p>
+    </div>
+  </div>
+</div>
+
+<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+    <h1 class="w3-margin w3-large">Depreme her koşulda hazırlıklı olalım. Deprem değil , binalar öldürür. </h1>
+</div>
+
+<!-- PROJE HAKKINDA BİTİŞ -->
+
+
+
+<!-- footer -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-6">
+        <h6>HAKKIMIZDA</h6>
+        <p class="text-justify">Bu proje, Bülent Ecevit Üniversitesi Bilgisayar Mühendisliği Öğrencileri tarafından geliştirilen ve tamamen gönüllülük esasına dayanan, hiçbir resmi kuruluşla herhangi bir bağlantısı bulunmayan bir sosyal sorumluluk projesidir.</p>
+      </div>
+
+      <div class="col-xs-6 col-md-3">
+        <h6>Kategoriler</h6>
+        <ul class="footer-links">
+          <li><a href="#">Anasayfa</a></li>
+          <li><a href="#">Son Depremler</a></li>
+          <li><a href="bagis.html">Bağış</a></li>
+          <li><a href="hakkimizda.html">Hakkımızda</a></li>
+          <li><a href="iletisim.html">İletişim</a></li>
+        </ul>
+      </div>
+
+      <div class="col-xs-6 col-md-3">
+        <h6>İletişim</h6>
+        <ul class="footer-links">
+          <li><a target="_blank" href="mailto:beyturbaris@gmail.com">beyturbaris@gmail.com</a></li>
+          <li><a target="_blank" href="https://www.linkedin.com/in/barisbeytur/">LinkedIn/BarışBeytur</a></li>
+          <li><a target="_blank" href="https://github.com/BarisBeytur">Github/BarışBeytur</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-sm-6 col-xs-12">
+        <p class="copyright-text">Copyright &copy; 2023 All Rights Reserved
+     <a href="https://www.linkedin.com/in/barisbeytur/" target="_blank" style="text-decoration-line: none;">Baris Beytur</a>.
+        </p>
+      </div>
+
+      <div class="col-md-4 col-sm-6 col-xs-12">
+        <ul class="social-icons">
+          <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+          <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+          <li><a target="_blank" class="github" href="https://github.com/BarisBeytur"><i class="fa fa-github"></i></a></li>
+          <li><a target="_blank" class="linkedin" href="https://www.linkedin.com/in/barisbeytur/"><i class="fa fa-linkedin"></i></a></li>   
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- footer bitiş -->
+
+<!-- Bootstrap Scripti -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+     crossorigin="anonymous">
+    </script>
+
+<!-- Carousel otomatik ilerleme scripti -->
+    <script>
+      const myCarouselElement = document.getElementById("carouselExampleCaptions");
+      const carousel = new bootstrap.Carousel(myCarouselElement, {
+      interval: 5000,
+      touch: false,
+      ride: "carousel"
+      })
+    </script>
+
+  </body>
+</html>
