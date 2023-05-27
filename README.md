@@ -4,11 +4,14 @@ Deprem Bilgi Deposu is a social information website created to provide convenien
 
 Deprem Bilgi Deposu, depremle ilgili tüm bilgileri tek bir sitede toplayarak kullanıcılara kolaylık sağlamak ve deprem konusunda farkındalık yaratmak amacıyla oluşturulmuş bir sosyal bilgilendirme sitesidir.
 
+Proje responsive şekilde tasarlanmıştır. Mobil cihazlarda çalışmaya uygundur.
+
 ###### Projede kullanılan dil ve teknolojiler:
 - HTML
 - CSS
 - JavaScript 
 - Bootstrap
+- Figma
 
 
 
